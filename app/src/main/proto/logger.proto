@@ -1,0 +1,117 @@
+syntax = "proto3";
+
+package logger;
+
+option java_multiple_files = true;
+option java_package = "com.example.logger";
+option java_outer_classname = "LoggerProto";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+// Определение сервиса логирования
+service LoggerService {
+  // Записать сообщение в лог
+  rpc LogMessage(LogRequest) returns (LogResponse) {}
+  
+  // Получить логи на основе фильтров
+  rpc GetLogs(LogFilter) returns (LogEntries) {}
+  
+  // Подписаться на логи в реальном времени
+  rpc SubscribeToLogs(LogFilter) returns (stream LogEntry) {}
+}
+
+// Уровни логирования
+enum LogLevel {
+  INFO = 0;
+  DEBUG = 1;
+  WARNING = 2;
+  ERROR = 3;
+}
+
+// Запрос на запись сообщения в лог
+message LogRequest {
+  // Уровень логирования
+  LogLevel level = 1;
+  
+  // Сообщение для записи
+  string message = 2;
+  
+  // Опциональные метаданные в виде пар ключ-значение
+  google.protobuf.Struct metadata = 3;
+  
+  // Источник лога (имя сервиса, компонента и т.д.)
+  string source = 4;
+}
+
+// Ответ на запрос логирования
+message LogResponse {
+  // Успешно ли записан лог
+  bool success = 1;
+  
+  // ID записи лога в случае успеха
+  string log_id = 2;
+  
+  // Сообщение об ошибке в случае неудачи
+  string error_message = 3;
+}
+
+// Запись лога
+message LogEntry {
+  // Уникальный ID записи лога
+  string id = 1;
+  
+  // Уровень логирования
+  LogLevel level = 2;
+  
+  // Сообщение
+  string message = 3;
+  
+  // Время создания лога
+  google.protobuf.Timestamp timestamp = 4;
+  
+  // Метаданные в виде пар ключ-значение
+  google.protobuf.Struct metadata = 5;
+  
+  // Источник лога
+  string source = 6;
+}
+
+// Фильтр для получения логов
+message LogFilter {
+  // Фильтр по уровню логирования (если не указан, включаются все уровни)
+  repeated LogLevel levels = 1;
+  
+  // Начало временного диапазона
+  google.protobuf.Timestamp start_time = 2;
+  
+  // Конец временного диапазона
+  google.protobuf.Timestamp end_time = 3;
+  
+  // Фильтр по источнику
+  string source = 4;
+  
+  // Фильтр по наличию ключей метаданных
+  repeated string metadata_keys = 5;
+  
+  // Фильтр по парам ключ-значение метаданных (все должны совпадать)
+  google.protobuf.Struct metadata_values = 6;
+  
+  // Максимальное количество логов для возврата (для пагинации)
+  int32 limit = 7;
+  
+  // Смещение для пагинации
+  int32 offset = 8;
+}
+
+// Множественные записи логов
+message LogEntries {
+  // Записи логов
+  repeated LogEntry entries = 1;
+  
+  // Общее количество логов, соответствующих фильтру
+  int32 total_count = 2;
+  
+  // Есть ли еще доступные логи
+  bool has_more = 3;
+}
