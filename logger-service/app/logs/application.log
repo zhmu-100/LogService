@@ -1,0 +1,14 @@
+20:43:18.013 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+20:43:18.435 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+20:43:18.442 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+20:43:18.465 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+20:43:18.488 [main] INFO  ktor.application - Application started in 0.031 seconds.
+20:43:18.494 [DefaultDispatcher-worker-2] INFO  ktor.application - Responding at http://0.0.0.0:8095
+21:02:44.449 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: GPS data requested | Пользователь: user-123 | Устройство: неизвестно
+21:04:04.169 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: GPS data requested | Пользователь: user-123 | Устройство: неизвестно
+21:11:56.419 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+21:11:56.825 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+21:11:56.832 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+21:11:56.859 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+21:11:56.893 [main] INFO  ktor.application - Application started in 0.042 seconds.
+21:11:56.903 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095

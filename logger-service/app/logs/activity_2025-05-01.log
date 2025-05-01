@@ -1,0 +1,2 @@
+2025-05-01T21:02:44.460074 - ActivityLogEntry(timestamp=1746122564381, userId=user-123, deviceModel=null, event=GPS data requested, level=INFO, additionalData={exercise_id=exercise-001})
+2025-05-01T21:04:04.177313 - ActivityLogEntry(timestamp=1746122644167, userId=user-123, deviceModel=null, event=GPS data requested, level=INFO, additionalData={exercise_id=exercise-001})
