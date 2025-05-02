@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
+
     // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")

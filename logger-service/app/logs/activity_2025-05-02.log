@@ -1,0 +1,115 @@
+2025-05-02T12:10:08.075257 - ActivityLogEntry(timestamp=1746177008014, userId=null, deviceModel=null, event=Starting Statistics Service with configuration:, level=INFO, additionalData={})
+2025-05-02T12:10:08.077099 - ActivityLogEntry(timestamp=1746177008055, userId=null, deviceModel=null, event=Port: 8082, level=INFO, additionalData={})
+2025-05-02T12:10:08.077336 - ActivityLogEntry(timestamp=1746177008068, userId=null, deviceModel=null, event=Database Mode: local, level=INFO, additionalData={})
+2025-05-02T12:10:08.07751 - ActivityLogEntry(timestamp=1746177008068, userId=null, deviceModel=null, event=Database Host: localhost, level=INFO, additionalData={})
+2025-05-02T12:10:08.077656 - ActivityLogEntry(timestamp=1746177008068, userId=null, deviceModel=null, event=Database Port: 8080, level=INFO, additionalData={})
+2025-05-02T12:10:08.079059 - ActivityLogEntry(timestamp=1746177008068, userId=null, deviceModel=null, event=ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T12:11:27.526829 - ActivityLogEntry(timestamp=1746177087479, userId=null, deviceModel=null, event=Starting Statistics Service with configuration:, level=INFO, additionalData={})
+2025-05-02T12:11:27.527531 - ActivityLogEntry(timestamp=1746177087520, userId=null, deviceModel=null, event=Port: 8082, level=INFO, additionalData={})
+2025-05-02T12:11:27.527712 - ActivityLogEntry(timestamp=1746177087524, userId=null, deviceModel=null, event=Database Mode: local, level=INFO, additionalData={})
+2025-05-02T12:11:27.527865 - ActivityLogEntry(timestamp=1746177087525, userId=null, deviceModel=null, event=Database Host: localhost, level=INFO, additionalData={})
+2025-05-02T12:11:27.528011 - ActivityLogEntry(timestamp=1746177087525, userId=null, deviceModel=null, event=Database Port: 8080, level=INFO, additionalData={})
+2025-05-02T12:11:27.528707 - ActivityLogEntry(timestamp=1746177087525, userId=null, deviceModel=null, event=ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T12:11:27.892324 - ActivityLogEntry(timestamp=1746177087891, userId=null, deviceModel=null, event=Connection check response: 404 Not Found, level=INFO, additionalData={})
+2025-05-02T12:11:45.280208 - ActivityLogEntry(timestamp=1746177105278, userId=null, deviceModel=null, event=Heart rate data requested, level=INFO, additionalData={exercise_id=exercise-001})
+2025-05-02T12:11:45.284008 - ActivityLogEntry(timestamp=1746177105283, userId=null, deviceModel=null, event=Sending select request to http://localhost:8080/select with body: {"table":"heart_rate_data","columns":["id","exercise_id","timestamp","bpm"],"filters":{"exercise_id":"exercise-001"},"orderBy":"timestamp ASC"}, level=INFO, additionalData={})
+2025-05-02T12:11:45.763904 - ActivityLogEntry(timestamp=1746177105763, userId=null, deviceModel=null, event=Select response: 200 OK, body: {
+    "status": "success",
+    "result": [
+        {
+            "id": "hr-123",
+            "exercise_id": "exercise-001",
+            "timestamp": "2023-08-15T10:00:15",
+            "bpm": 75
+        },
+        {
+            "id": "hr-123",
+            "exercise_id": "exercise-001",
+            "timestamp": "2023-08-15T10:00:15",
+            "bpm": 75
+        }
+    ]
+}, level=INFO, additionalData={})
+2025-05-02T12:11:45.774559 - ActivityLogEntry(timestamp=1746177105774, userId=null, deviceModel=null, event=Heart rate data retrieved, level=INFO, additionalData={exercise_id=exercise-001, records_count=2})
+2025-05-02T12:20:10.309035 - ActivityLogEntry(timestamp=1746177610299, userId=null, deviceModel=null, event=Heart rate data requested, level=INFO, additionalData={exercise_id=exercise-001})
+2025-05-02T12:20:10.311792 - ActivityLogEntry(timestamp=1746177610301, userId=null, deviceModel=null, event=Sending select request to http://localhost:8080/select with body: {"table":"heart_rate_data","columns":["id","exercise_id","timestamp","bpm"],"filters":{"exercise_id":"exercise-001"},"orderBy":"timestamp ASC"}, level=INFO, additionalData={})
+2025-05-02T12:20:10.96549 - ActivityLogEntry(timestamp=1746177610965, userId=null, deviceModel=null, event=Select response: 200 OK, body: {
+    "status": "success",
+    "result": [
+        {
+            "id": "hr-123",
+            "exercise_id": "exercise-001",
+            "timestamp": "2023-08-15T10:00:15",
+            "bpm": 75
+        },
+        {
+            "id": "hr-123",
+            "exercise_id": "exercise-001",
+            "timestamp": "2023-08-15T10:00:15",
+            "bpm": 75
+        }
+    ]
+}, level=INFO, additionalData={})
+2025-05-02T12:20:10.974983 - ActivityLogEntry(timestamp=1746177610974, userId=null, deviceModel=null, event=Heart rate data retrieved, level=INFO, additionalData={exercise_id=exercise-001, records_count=2})
+2025-05-02T16:57:26.347451 - ActivityLogEntry(timestamp=1746194246277, userId=null, deviceModel=null, event=Port: 8082, level=INFO, additionalData={})
+2025-05-02T16:57:26.351159 - ActivityLogEntry(timestamp=1746194246223, userId=null, deviceModel=null, event=Starting Statistics Service with configuration:, level=INFO, additionalData={})
+2025-05-02T16:57:26.351567 - ActivityLogEntry(timestamp=1746194246329, userId=null, deviceModel=null, event=Database Mode: local, level=INFO, additionalData={})
+2025-05-02T16:57:26.351825 - ActivityLogEntry(timestamp=1746194246329, userId=null, deviceModel=null, event=Database Host: localhost, level=INFO, additionalData={})
+2025-05-02T16:57:26.352146 - ActivityLogEntry(timestamp=1746194246330, userId=null, deviceModel=null, event=Database Port: 8080, level=INFO, additionalData={})
+2025-05-02T16:57:26.352339 - ActivityLogEntry(timestamp=1746194246340, userId=null, deviceModel=null, event=ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:57:26.40396 - ActivityLogEntry(timestamp=1746194246401, userId=null, deviceModel=null, event=Initializing database connection in local mode, level=INFO, additionalData={})
+2025-05-02T16:57:26.404236 - ActivityLogEntry(timestamp=1746194246402, userId=null, deviceModel=null, event=Using ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:57:26.587596 - ActivityLogEntry(timestamp=1746194246586, userId=null, deviceModel=null, event=Connection check response: 404 Not Found, level=INFO, additionalData={})
+2025-05-02T16:57:26.598767 - ActivityLogEntry(timestamp=1746194246598, userId=null, deviceModel=null, event=Could not connect to ClickHouse Service, level=WARN, additionalData={})
+2025-05-02T16:57:26.599132 - ActivityLogEntry(timestamp=1746194246598, userId=null, deviceModel=null, event=Database initialized successfully with URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:57:55.9227 - ActivityLogEntry(timestamp=1746194275859, userId=null, deviceModel=null, event=Starting Statistics Service with configuration:, level=INFO, additionalData={})
+2025-05-02T16:57:55.925166 - ActivityLogEntry(timestamp=1746194275897, userId=null, deviceModel=null, event=Port: 8082, level=INFO, additionalData={})
+2025-05-02T16:57:55.925536 - ActivityLogEntry(timestamp=1746194275914, userId=null, deviceModel=null, event=Database Mode: local, level=INFO, additionalData={})
+2025-05-02T16:57:55.926006 - ActivityLogEntry(timestamp=1746194275915, userId=null, deviceModel=null, event=Database Host: localhost, level=INFO, additionalData={})
+2025-05-02T16:57:55.926527 - ActivityLogEntry(timestamp=1746194275915, userId=null, deviceModel=null, event=Database Port: 8080, level=INFO, additionalData={})
+2025-05-02T16:57:55.926865 - ActivityLogEntry(timestamp=1746194275915, userId=null, deviceModel=null, event=ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:57:55.990684 - ActivityLogEntry(timestamp=1746194275990, userId=null, deviceModel=null, event=Initializing database connection in local mode, level=INFO, additionalData={})
+2025-05-02T16:57:55.991338 - ActivityLogEntry(timestamp=1746194275990, userId=null, deviceModel=null, event=Using ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:57:56.065928 - ActivityLogEntry(timestamp=1746194276065, userId=null, deviceModel=null, event=Connection check response: 404 Not Found, level=INFO, additionalData={})
+2025-05-02T16:57:56.066766 - ActivityLogEntry(timestamp=1746194276066, userId=null, deviceModel=null, event=Could not connect to ClickHouse Service, level=WARN, additionalData={})
+2025-05-02T16:57:56.067325 - ActivityLogEntry(timestamp=1746194276067, userId=null, deviceModel=null, event=Database initialized successfully with URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:58:49.22076 - ActivityLogEntry(timestamp=1746194329183, userId=null, deviceModel=null, event=Port: 8082, level=INFO, additionalData={})
+2025-05-02T16:58:49.223356 - ActivityLogEntry(timestamp=1746194329116, userId=null, deviceModel=null, event=Starting Statistics Service with configuration:, level=INFO, additionalData={})
+2025-05-02T16:58:49.223662 - ActivityLogEntry(timestamp=1746194329186, userId=null, deviceModel=null, event=Database Mode: local, level=INFO, additionalData={})
+2025-05-02T16:58:49.223907 - ActivityLogEntry(timestamp=1746194329208, userId=null, deviceModel=null, event=Database Host: localhost, level=INFO, additionalData={})
+2025-05-02T16:58:49.224358 - ActivityLogEntry(timestamp=1746194329209, userId=null, deviceModel=null, event=Database Port: 8080, level=INFO, additionalData={})
+2025-05-02T16:58:49.224537 - ActivityLogEntry(timestamp=1746194329210, userId=null, deviceModel=null, event=ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:58:49.306849 - ActivityLogEntry(timestamp=1746194329306, userId=null, deviceModel=null, event=Initializing database connection in local mode, level=INFO, additionalData={})
+2025-05-02T16:58:49.310282 - ActivityLogEntry(timestamp=1746194329309, userId=null, deviceModel=null, event=Using ClickHouse Service URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T16:58:49.428795 - ActivityLogEntry(timestamp=1746194329428, userId=null, deviceModel=null, event=Could not connect to ClickHouse Service, level=WARN, additionalData={})
+2025-05-02T16:58:49.429271 - ActivityLogEntry(timestamp=1746194329428, userId=null, deviceModel=null, event=Database initialized successfully with URL: http://localhost:8080, level=INFO, additionalData={})
+2025-05-02T18:09:32.79423 - ActivityLogEntry(timestamp=1746198572683, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T18:09:32.906935 - ActivityLogEntry(timestamp=1746198572906, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})
+2025-05-02T18:10:00.109921 - ActivityLogEntry(timestamp=1746198600105, userId=user123, deviceModel=null, event=List notes request, level=INFO, additionalData={page=1, pageSize=10})
+2025-05-02T18:10:00.420126 - ActivityLogEntry(timestamp=1746198600419, userId=user123, deviceModel=null, event=Notes list retrieved, level=INFO, additionalData={count=3, page=1})
+2025-05-02T18:10:30.242611 - ActivityLogEntry(timestamp=1746198630237, userId=user123, deviceModel=null, event=List notes request, level=INFO, additionalData={page=1, pageSize=10})
+2025-05-02T18:17:10.851713 - ActivityLogEntry(timestamp=1746199030777, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T18:17:10.913554 - ActivityLogEntry(timestamp=1746199030913, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})
+2025-05-02T18:17:32.450147 - ActivityLogEntry(timestamp=1746199052359, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T18:17:32.560922 - ActivityLogEntry(timestamp=1746199052560, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})
+2025-05-02T18:18:40.717624 - ActivityLogEntry(timestamp=1746199120715, userId=user123, deviceModel=null, event=List notes request, level=INFO, additionalData={page=1, pageSize=10})
+2025-05-02T18:41:14.218598 - ActivityLogEntry(timestamp=1746200474122, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T18:41:14.271506 - ActivityLogEntry(timestamp=1746200474271, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})
+2025-05-02T18:41:34.293535 - ActivityLogEntry(timestamp=1746200494225, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T18:41:34.568791 - ActivityLogEntry(timestamp=1746200494567, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})
+2025-05-02T18:42:13.063982 - ActivityLogEntry(timestamp=1746200533059, userId=null, deviceModel=null, event=Запрос начат: GET /notebook/notes, level=INFO, additionalData={requestId=dd377c72-c162-46e6-bf96-b15e80997a51, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15})
+2025-05-02T18:42:13.089036 - ActivityLogEntry(timestamp=1746200533088, userId=user123, deviceModel=null, event=List notes request, level=INFO, additionalData={page=1, pageSize=10})
+2025-05-02T18:42:40.829331 - ActivityLogEntry(timestamp=1746200560807, userId=null, deviceModel=null, event=Запрос начат: GET /notebook/notes, level=INFO, additionalData={requestId=70241515-4073-4943-a6e9-4c53b6ef4a75, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15})
+2025-05-02T18:42:40.830258 - ActivityLogEntry(timestamp=1746200560826, userId=user123, deviceModel=null, event=List notes request, level=INFO, additionalData={page=1, pageSize=10})
+2025-05-02T18:42:41.345991 - ActivityLogEntry(timestamp=1746200561345, userId=user123, deviceModel=null, event=Notes list retrieved, level=INFO, additionalData={count=3, page=1})
+2025-05-02T18:42:41.365372 - ActivityLogEntry(timestamp=1746200561364, userId=null, deviceModel=null, event=Запрос завершен: GET /notebook/notes, level=INFO, additionalData={requestId=70241515-4073-4943-a6e9-4c53b6ef4a75, status=200})
+2025-05-02T18:45:42.113959 - ActivityLogEntry(timestamp=1746200742022, userId=null, deviceModel=null, event=Запрос начат: GET /notebook/notes, level=INFO, additionalData={requestId=aec2ec95-19e3-413d-bc1d-6a93a4b60b9f, userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15})
+2025-05-02T18:45:42.115847 - ActivityLogEntry(timestamp=1746200742107, userId=user123, deviceModel=null, event=List notes request, level=INFO, additionalData={page=1, pageSize=10})
+2025-05-02T18:45:42.180104 - ActivityLogEntry(timestamp=1746200742179, userId=user123, deviceModel=null, event=Notes list retrieved, level=INFO, additionalData={count=3, page=1})
+2025-05-02T18:45:42.206704 - ActivityLogEntry(timestamp=1746200742206, userId=null, deviceModel=null, event=Запрос завершен: GET /notebook/notes, level=INFO, additionalData={requestId=aec2ec95-19e3-413d-bc1d-6a93a4b60b9f, status=200})
+2025-05-02T18:57:22.601498 - ActivityLogEntry(timestamp=1746201442531, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T18:57:22.697085 - ActivityLogEntry(timestamp=1746201442695, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})
+2025-05-02T19:11:09.768601 - ActivityLogEntry(timestamp=1746202269687, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T19:11:09.944121 - ActivityLogEntry(timestamp=1746202269943, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})
+2025-05-02T19:11:30.160387 - ActivityLogEntry(timestamp=1746202290093, userId=null, deviceModel=null, event=Application starting, level=INFO, additionalData={port=8001, redisHost=localhost})
+2025-05-02T19:11:30.246877 - ActivityLogEntry(timestamp=1746202290246, userId=null, deviceModel=null, event=Application started successfully, level=INFO, additionalData={port=8001})

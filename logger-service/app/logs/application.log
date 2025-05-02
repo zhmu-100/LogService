@@ -12,3 +12,148 @@
 21:11:56.859 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
 21:11:56.893 [main] INFO  ktor.application - Application started in 0.042 seconds.
 21:11:56.903 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095
+12:19:46.761 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+12:19:47.107 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+12:19:47.114 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+12:19:47.141 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+12:19:47.173 [main] INFO  ktor.application - Application started in 0.039 seconds.
+12:19:47.181 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095
+12:20:10.303 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Heart rate data requested | Пользователь: неизвестен | Устройство: неизвестно
+12:20:10.311 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Sending select request to http://localhost:8080/select with body: {"table":"heart_rate_data","columns":["id","exercise_id","timestamp","bpm"],"filters":{"exercise_id":"exercise-001"},"orderBy":"timestamp ASC"} | Пользователь: неизвестен | Устройство: неизвестно
+12:20:10.965 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Select response: 200 OK, body: {
+    "status": "success",
+    "result": [
+        {
+            "id": "hr-123",
+            "exercise_id": "exercise-001",
+            "timestamp": "2023-08-15T10:00:15",
+            "bpm": 75
+        },
+        {
+            "id": "hr-123",
+            "exercise_id": "exercise-001",
+            "timestamp": "2023-08-15T10:00:15",
+            "bpm": 75
+        }
+    ]
+} | Пользователь: неизвестен | Устройство: неизвестно
+12:20:10.974 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Heart rate data retrieved | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.338 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Port: 8082 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.350 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Starting Statistics Service with configuration: | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.351 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Database Mode: local | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.351 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Database Host: localhost | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.352 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Database Port: 8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.352 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: ClickHouse Service URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.403 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Initializing database connection in local mode | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.404 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Using ClickHouse Service URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.587 [DefaultDispatcher-worker-10] INFO  c.mad.logger.service.LoggerService - Активность: Connection check response: 404 Not Found | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.598 [DefaultDispatcher-worker-13] INFO  c.mad.logger.service.LoggerService - Активность: Could not connect to ClickHouse Service | Пользователь: неизвестен | Устройство: неизвестно
+16:57:26.598 [DefaultDispatcher-worker-13] INFO  c.mad.logger.service.LoggerService - Активность: Database initialized successfully with URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:45.715 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+16:57:46.066 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+16:57:46.073 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+16:57:46.100 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+16:57:46.130 [main] INFO  ktor.application - Application started in 0.038 seconds.
+16:57:46.138 [DefaultDispatcher-worker-2] INFO  ktor.application - Responding at http://0.0.0.0:8095
+16:57:55.915 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Starting Statistics Service with configuration: | Пользователь: неизвестен | Устройство: неизвестно
+16:57:55.925 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Port: 8082 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:55.925 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Database Mode: local | Пользователь: неизвестен | Устройство: неизвестно
+16:57:55.925 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Database Host: localhost | Пользователь: неизвестен | Устройство: неизвестно
+16:57:55.926 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Database Port: 8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:55.926 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: ClickHouse Service URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:55.990 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Initializing database connection in local mode | Пользователь: неизвестен | Устройство: неизвестно
+16:57:55.991 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Using ClickHouse Service URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:57:56.065 [DefaultDispatcher-worker-6] INFO  c.mad.logger.service.LoggerService - Активность: Connection check response: 404 Not Found | Пользователь: неизвестен | Устройство: неизвестно
+16:57:56.066 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Could not connect to ClickHouse Service | Пользователь: неизвестен | Устройство: неизвестно
+16:57:56.067 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Database initialized successfully with URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:58:44.440 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+16:58:44.801 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+16:58:44.808 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+16:58:44.831 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+16:58:44.859 [main] INFO  ktor.application - Application started in 0.034 seconds.
+16:58:44.867 [DefaultDispatcher-worker-2] INFO  ktor.application - Responding at http://0.0.0.0:8095
+16:58:49.211 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Port: 8082 | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.223 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Starting Statistics Service with configuration: | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.223 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Database Mode: local | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.223 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Database Host: localhost | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.224 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Database Port: 8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.224 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: ClickHouse Service URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.306 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Initializing database connection in local mode | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.309 [DefaultDispatcher-worker-8] INFO  c.mad.logger.service.LoggerService - Активность: Using ClickHouse Service URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.428 [DefaultDispatcher-worker-9] INFO  c.mad.logger.service.LoggerService - Активность: Could not connect to ClickHouse Service | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.429 [DefaultDispatcher-worker-9] INFO  c.mad.logger.service.LoggerService - Активность: Database initialized successfully with URL: http://localhost:8080 | Пользователь: неизвестен | Устройство: неизвестно
+16:58:49.430 [DefaultDispatcher-worker-7] ERROR c.mad.logger.service.LoggerService - Ошибка: Error checking connection to ClickHouse Service | Сообщение: Connection refused | Пользователь: неизвестен | Устройство: неизвестно
+18:09:17.983 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+18:09:18.374 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+18:09:18.382 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+18:09:18.407 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+18:09:18.440 [main] INFO  ktor.application - Application started in 0.04 seconds.
+18:09:18.449 [DefaultDispatcher-worker-1] INFO  ktor.application - Responding at http://0.0.0.0:8095
+18:09:32.783 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+18:09:32.906 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+18:10:00.107 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: List notes request | Пользователь: user123 | Устройство: неизвестно
+18:10:00.419 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Notes list retrieved | Пользователь: user123 | Устройство: неизвестно
+18:10:30.238 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: List notes request | Пользователь: user123 | Устройство: неизвестно
+18:17:10.844 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+18:17:10.913 [DefaultDispatcher-worker-6] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+18:17:24.807 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+18:17:25.196 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+18:17:25.203 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+18:17:25.231 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+18:17:25.261 [main] INFO  ktor.application - Application started in 0.039 seconds.
+18:17:25.269 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095
+18:17:32.443 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+18:17:32.560 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+18:18:40.716 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: List notes request | Пользователь: user123 | Устройство: неизвестно
+18:41:14.208 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+18:41:14.271 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+18:41:29.759 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+18:41:30.141 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+18:41:30.152 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+18:41:30.177 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+18:41:30.209 [main] INFO  ktor.application - Application started in 0.04 seconds.
+18:41:30.222 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095
+18:41:34.284 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+18:41:34.568 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+18:42:13.061 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Запрос начат: GET /notebook/notes | Пользователь: неизвестен | Устройство: неизвестно
+18:42:13.088 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: List notes request | Пользователь: user123 | Устройство: неизвестно
+18:42:13.335 [DefaultDispatcher-worker-4] ERROR c.mad.logger.service.LoggerService - Ошибка: Ошибка при обработке запроса: GET /notebook/notes (повторений: 1) | Сообщение: Connection refused | Пользователь: неизвестен | Устройство: неизвестно
+18:42:40.827 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Запрос начат: GET /notebook/notes | Пользователь: неизвестен | Устройство: неизвестно
+18:42:40.829 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: List notes request | Пользователь: user123 | Устройство: неизвестно
+18:42:41.345 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Notes list retrieved | Пользователь: user123 | Устройство: неизвестно
+18:42:41.365 [DefaultDispatcher-worker-6] INFO  c.mad.logger.service.LoggerService - Активность: Запрос завершен: GET /notebook/notes | Пользователь: неизвестен | Устройство: неизвестно
+18:45:42.109 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Запрос начат: GET /notebook/notes | Пользователь: неизвестен | Устройство: неизвестно
+18:45:42.115 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: List notes request | Пользователь: user123 | Устройство: неизвестно
+18:45:42.179 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Notes list retrieved | Пользователь: user123 | Устройство: неизвестно
+18:45:42.206 [DefaultDispatcher-worker-6] INFO  c.mad.logger.service.LoggerService - Активность: Запрос завершен: GET /notebook/notes | Пользователь: неизвестен | Устройство: неизвестно
+18:56:55.884 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+18:56:56.279 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+18:56:56.289 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+18:56:56.314 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+18:56:56.344 [main] INFO  ktor.application - Application started in 0.038 seconds.
+18:56:56.352 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095
+18:57:22.590 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+18:57:22.696 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+19:10:53.529 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+19:10:53.885 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+19:10:53.892 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+19:10:53.920 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+19:10:53.949 [main] INFO  ktor.application - Application started in 0.037 seconds.
+19:10:53.957 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095
+19:11:09.759 [DefaultDispatcher-worker-3] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+19:11:09.943 [DefaultDispatcher-worker-1] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+19:11:23.444 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+19:11:23.838 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+19:11:23.846 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+19:11:23.874 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+19:11:23.906 [main] INFO  ktor.application - Application started in 0.04 seconds.
+19:11:23.914 [DefaultDispatcher-worker-2] INFO  ktor.application - Responding at http://0.0.0.0:8095
+19:11:30.153 [DefaultDispatcher-worker-2] INFO  c.mad.logger.service.LoggerService - Активность: Application starting | Пользователь: неизвестен | Устройство: неизвестно
+19:11:30.246 [DefaultDispatcher-worker-4] INFO  c.mad.logger.service.LoggerService - Активность: Application started successfully | Пользователь: неизвестен | Устройство: неизвестно
+19:12:15.880 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=63791, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+19:12:37.503 [main] INFO  com.mad.logger.Application - Запуск сервиса логирования с конфигурацией: AppConfig(redis=RedisConfig(host=localhost, port=6379, password=, activityChannel=logger:activity, errorChannel=logger:error), logger=LoggerConfig(logToFile=true, logFilePath=logs, rotationPeriod=daily, consoleLogLevel=INFO), api=ApiConfig(host=0.0.0.0, port=8095))
+19:12:37.919 [main] INFO  com.mad.logger.service.RedisService - Подписка на каналы Redis настроена: logger:activity, logger:error
+19:12:37.925 [main] INFO  c.mad.logger.service.LoggerService - Запущена обработка логов
+19:12:37.947 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+19:12:37.986 [main] INFO  ktor.application - Application started in 0.046 seconds.
+19:12:37.992 [DefaultDispatcher-worker-3] INFO  ktor.application - Responding at http://0.0.0.0:8095
